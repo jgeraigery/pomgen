@@ -51,7 +51,7 @@ maven_install(
         # org.antlr:ST4:4.0.7 brings in antlr:antr:2.7.7 - we override
         # the version here to 2.7.6 to test how version overrides of transitives
         # carry over into the generate pom files
-        maven.artifact(group = "antlr", artifact = "antlr", version = "2.7.6",),
+        maven.artifact(group = "antlr", artifact = "antlr", version = "20030911",),
     ],
     repositories = [
         "https://repo1.maven.org/maven2",
