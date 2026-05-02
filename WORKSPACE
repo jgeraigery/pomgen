@@ -24,10 +24,10 @@ rules_jvm_external_setup()
 maven_install(
     name = "maven",
     artifacts = [
-        maven.artifact(group = "com.google.guava", artifact = "guava", version = "33.4.8-jre", exclusions = ["*:*"]),
+        maven.artifact(group = "com.google.guava", artifact = "guava", version = "33.6.0-jre", exclusions = ["*:*"]),
         maven.artifact(group = "org.apache.commons", artifact = "commons-lang3", version = "3.9", exclusions = ["*:*"]),
         maven.artifact(group = "org.apache.commons", artifact = "commons-math3", version = "3.6.1", exclusions = ["*:*"]),
-        maven.artifact(group = "org.antlr", artifact = "ST4", version = "4.0.7",exclusions = ["antlr:antlr"]),
+        maven.artifact(group = "org.antlr", artifact = "ST4", version = "4.3.4",exclusions = ["antlr:antlr"]),
     ],
     repositories = [
         "https://repo1.maven.org/maven2",
@@ -47,7 +47,7 @@ pinned_maven_install()
 maven_install(
     name = "antlr",
     artifacts = [
-        maven.artifact(group = "org.antlr", artifact = "ST4", version = "4.0.7",),
+        maven.artifact(group = "org.antlr", artifact = "ST4", version = "4.3.4",),
         # org.antlr:ST4:4.0.7 brings in antlr:antr:2.7.7 - we override
         # the version here to 2.7.6 to test how version overrides of transitives
         # carry over into the generate pom files
